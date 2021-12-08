@@ -1,0 +1,23 @@
+.item-app {
+    .item-category {
+        height: 60px;
+        display: flex;
+        justify-content: flex-end;
+        .category-btn {
+            cursor: pointer;
+            line-height: 1.8;
+            padding: 10px;
+            background-color: rgb(25, 81, 95);
+            color: white;
+            border-radius: 10px;
+            margin: 5px;
+            margin-right: 20px;
+            .remove-btn {
+                margin-right: 10px;
+            }
+        }
+    }
+    .item-grid {
+        justify-content: space-between;
+    }
+}

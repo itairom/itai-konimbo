@@ -1,0 +1,14 @@
+.item-filter {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    background-color: rgb(195, 166, 166);
+    margin: 0 30px;
+    input {
+        width: 100px;
+    }
+    @include for-narrow-layout {
+        // width: 40vw;
+    }
+}

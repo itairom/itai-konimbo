@@ -1,0 +1,7 @@
+.item-list{
+
+    @include for-narrow-layout{
+        // width: 40vw;
+        background-color: brown;
+    }
+}

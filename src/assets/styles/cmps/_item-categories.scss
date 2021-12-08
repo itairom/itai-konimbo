@@ -1,0 +1,23 @@
+.item-categories {
+    display: none;
+
+    @include for-narrow-layout {
+        display: block;
+        // width: 30vw;
+    }
+    .categories-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        li {
+            text-align: start;
+            direction: rtl;
+            cursor: pointer;
+            width: 150px;
+            list-style: none;
+            border: 1px solid black;
+            padding: 10px;
+        }
+        margin: 10px;
+    }
+}
