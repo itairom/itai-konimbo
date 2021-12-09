@@ -2,7 +2,7 @@
     margin: 20px 0;
     padding: 10px;
     border: 1px solid black;
-
+    width: 270px;
     form {
         direction: rtl;
         p {
@@ -13,14 +13,14 @@
         flex-direction: column;
         justify-content: center;
         input {
-            width: 300px;
-            font-size: 1.2rem;
+            width: 240px;
+            font-size: 1.1rem;
             border: 1px solid black !important;
             margin: 10px 0;
         }
-        button{
+        button {
             width: 100px;
-                padding: 10px;
+            padding: 10px;
         }
     }
 }

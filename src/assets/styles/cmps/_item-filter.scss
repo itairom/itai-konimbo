@@ -1,38 +1,39 @@
-.filter-bar{
-height: 40px;
-    
+.filter-bar {
+    height: 40px;
+
     .item-filter {
         width: 100%;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         direction: rtl;
         margin-top: 10px;
 
-        .menu-btn{
+      
+        .menu-btn {
             display: block;
             cursor: pointer;
-            
-            img{
-                width:45px;
-                height:45px;
+
+            img {
+                width: 45px;
+                height: 45px;
             }
 
             @include for-narrow-layout {
                 display: none;
             }
         }
-        img{
-            width:25px;
-            height:25px;
+        img {
+            width: 25px;
+            height: 25px;
         }
         input {
-            width: 150px;
-            border-bottom: 1px solid black ;
+            width: 200px;
+            border-bottom: 1px solid black;
             font-size: 20px;
             @include for-narrow-layout {
                 width: 200px;
             }
         }
     }
-    
 }

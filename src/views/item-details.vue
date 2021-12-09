@@ -22,14 +22,13 @@
             </slide>
           </carousel>
         </div>
-      <information-modal v-show="this.isNarrow" />
       </div>
       <div class="info-section">
         <h1>{{ item.title }}</h1>
         <h1>{{ item.desc }}</h1>
-        <div class="flex column">
+        <div class="left-section flex column">
           <div class="purchase-section flex">
-            <div class="flex column">
+            <div class="price-container flex column">
               <h1 class="origin-price" v-if="item.origin_price">
                 {{ item.origin_price }} ₪
               </h1>
@@ -52,10 +51,10 @@
               <p>אפשרות לעד 24 תשלומים ללא ריבית</p>
             </div>
           </div>
+      <information-modal v-show="this.isNarrow" />
+
         </div>
-        <div class="mobile-information" v-show="!this.isNarrow">
-          <information-modal />
-        </div>
+          <information-modal class="mobile-information" v-show="!isNarrow"/>
       </div>
 
   </section>
@@ -85,7 +84,7 @@ export default {
     return {
       item: null,
       currImage: null,
-      isNarrow: null,
+      isNarrow: true,
     };
   },
   updated(){
@@ -102,7 +101,7 @@ export default {
         "🚀 ~ file: item-details.vue ~ line 95 ~ widthListner ~ pageWidth",
         pageWidth
       );
-      if (pageWidth > 500) {
+      if (pageWidth > 700) {
         this.isNarrow = true;
       } else {
         this.isNarrow = false;

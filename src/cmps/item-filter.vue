@@ -1,5 +1,6 @@
 <template>
   <section class="item-filter">
+
     <form>
       <input
         v-model="filterBy.title"
@@ -9,6 +10,7 @@
       />
       <img :src="require('@/assets/img/loupe.png')" alt="חפש" />
     </form>
+
     <div @click="toggleCategory()" class="menu-btn">
       <img
         class="menu-btn"

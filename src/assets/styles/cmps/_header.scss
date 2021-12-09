@@ -1,0 +1,32 @@
+.app-header {
+    width: 96 dvw;
+    padding: 0 10px;
+    background-color: #dfdfdf;
+    @include for-narrow-layout {
+        width: 98vw;
+        padding: 0 50px;
+    }
+    p {
+        display: none;
+        @include for-narrow-layout {
+            display: block;
+        }
+        &:last-of-type {
+            font-weight: bold;
+            color: rgb(197, 31, 31);
+            cursor: pointer;
+        }
+    }
+
+    .logo {
+        width: 220px;
+        height: 50px;
+        object-fit: cover;
+        background-color: black;
+    }
+    .cart {
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+    }
+}
