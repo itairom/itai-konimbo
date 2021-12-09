@@ -1,8 +1,6 @@
 .item-list{
 margin-bottom: 100px;
     @include for-narrow-layout{
-        background-color: brown;
-        
     }
 
 }

@@ -9,9 +9,6 @@
 <script>
 import ItemPreview from './item-preview.vue';
 export default {
-  created() {
-      // console.log('items',this.items);
-  },
   components: {
     ItemPreview
   },

@@ -3,7 +3,6 @@
 import axios from 'axios';
 import { Utils } from './utils.service'
 
-
 let gItems = null
 
 export default {
@@ -26,15 +25,17 @@ async function fetch() {
         })
     return items
 }
-async function postDetails() {
+async function postDetails(userInfo) {
     console.log('POST');
     const items = await axios.post('https://webhook.site/202838e1-803f-42d6-a494-fec5ab089a5b',
-        { kid: 'bambo' },
-        { headers: { "Accept": "application/json" } })
-        .then(res => {
-            console.log(res.data)
+        { userInfo },
+        {
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*",
+            }
         })
-    return items
 }
 
 function getItemById(id) {

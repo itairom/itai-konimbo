@@ -1,0 +1,26 @@
+.informaion-container {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid black;
+
+    form {
+        direction: rtl;
+        p {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        input {
+            width: 300px;
+            font-size: 1.2rem;
+            border: 1px solid black !important;
+            margin: 10px 0;
+        }
+        button{
+            width: 100px;
+                padding: 10px;
+        }
+    }
+}
