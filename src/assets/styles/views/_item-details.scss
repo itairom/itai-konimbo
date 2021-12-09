@@ -9,15 +9,31 @@
             display: flex;
         }
     }
-
+    
     @include for-narrow-layout {
         flex-direction: row;
         align-items: flex-start;
         padding: 0 30px;
+        margin-top: 20px;
     }
     @include for-normal-layout {
         justify-content: center;
         padding: 0 30px;
+    }
+    
+    a{
+        img{
+            width: 20px;
+            height: 20px;
+        }
+        // padding: 10px;
+        text-decoration: none;
+        position: absolute;
+        right: 10px;
+        top: 80px;
+        @include for-narrow-layout {
+            right: 50px;
+        }
     }
 
     .info-section {
@@ -131,4 +147,6 @@
             padding-top: 5px;
         }
     }
+
+  
 }
