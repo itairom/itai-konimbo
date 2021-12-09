@@ -11,7 +11,8 @@ margin: 0 50px;
 .main-container {
   display: grid;
   grid-template-columns: 50px 1fr 50px;
-  min-height: 100vh;
+  min-height: 80vh;
+  // min-height: 100vh;
   height: 100%;
 
   @include for-mobile-layout {

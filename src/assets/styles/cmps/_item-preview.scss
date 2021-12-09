@@ -4,40 +4,45 @@
     align-items: center;
     border: 1px solid black;
     padding: 10px;
-    margin-right: 20px;
-    margin-top: 20px;
+    margin: 10px 0px;
+    margin-right: 10px;
+    font-weight: bold;
     
     .title{
         height: 50px;
         direction: rtl;
-        width: 250px;
+        width: 170px;
         text-align: center;
         margin: 15px 0;
-        font-weight: bold;
+        // font-weight: bold;
     }
     img{
-        width: 300px;
-        height: 300px;
+        width: 170px;
+        height: 170px;
         object-fit: cover;
         margin-bottom: 20px;
     }
     
-    @include for-narrow-layout{
+    @include for-normal-layout{
+        background-color: aquamarine;
+        margin-bottom: 0px;
+        margin-right: 20px;
+
         .title{
-            width: 200px;
+            width: 230px;
         }
         img{
-            width: 220px;
-            width: 220px;
+            width: 230px;
+            width: 230px;
         }
     }
-    @include for-narrow-layout{
-        .title{
-            width: 250px;
-        }
-        img{
-            width: 300px;
-            width: 300px;
-        }
-    }
+    // @include for-narrow-layout{
+    //     .title{
+    //         width: 250px;
+    //     }
+    //     img{
+    //         width: 300px;
+    //         width: 300px;
+    //     }
+    // }
 }

@@ -1,23 +1,55 @@
 .item-categories {
     display: none;
+    border-radius: 10px;
+    padding: 3px;
+    border: 1px solid #333;
+    h1 {
+        padding: 5px 0;
+        text-align: center;
+        border-bottom: #333 solid 1px;
+    }
 
     @include for-narrow-layout {
         display: block;
-        // width: 30vw;
+        margin-left: 10px;
+        border-radius: none;
+        padding: none;
+        border: none;
     }
+
     .categories-list {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        margin: 10px;
+        height: 70vh;
+        overflow-y: scroll;
+        @include for-narrow-layout{
+            height: 100%;
+            overflow-y: hidden;
+
+        }
+
+        
+
         li {
+            color: #333;
             text-align: start;
             direction: rtl;
             cursor: pointer;
             width: 150px;
             list-style: none;
-            border: 1px solid black;
-            padding: 10px;
+            padding: 5px 0;
+            margin-right: 5px;
+            &:hover {
+                color: black;
+                font-weight: bold;
+            }
+            
+            &:focus {
+                color: black;
+                font-weight: bolder;
+            }
         }
-        margin: 10px;
     }
 }

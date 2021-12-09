@@ -18,6 +18,10 @@
         }
     }
     .item-grid {
-        justify-content: space-between;
+        justify-content: center;
+        @include for-narrow-layout{
+            justify-content: right;
+
+        }
     }
 }

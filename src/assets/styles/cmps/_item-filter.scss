@@ -1,14 +1,40 @@
-.item-filter {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    direction: rtl;
-    background-color: rgb(195, 166, 166);
-    margin: 0 30px;
-    input {
-        width: 100px;
+.filter-bar{
+height: 40px;
+    
+    .item-filter {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        direction: rtl;
+        background-color: rgb(195, 166, 166);
+        // margin: 0 30px;
+
+        .menu-btn{
+            display: block;
+            cursor: pointer;
+            
+            img{
+                width:45px;
+                height:45px;
+            }
+
+            @include for-narrow-layout {
+                display: none;
+            }
+        }
+        img{
+            width:25px;
+            height:25px;
+        }
+        input {
+            width: 150px;
+            border-bottom: 2px solid black ;
+            font-size: 20px;
+            @include for-narrow-layout {
+                // width: 40vw;
+                width: 200px;
+            }
+        }
     }
-    @include for-narrow-layout {
-        // width: 40vw;
-    }
+    
 }

@@ -8,7 +8,8 @@ let gItems = null
 
 export default {
     query,
-    getItemById
+    getItemById,
+    postDetails
 };
 
 async function query() {
@@ -22,6 +23,16 @@ async function fetch() {
         .then(res => {
             console.log(res.data)
             return res.data
+        })
+    return items
+}
+async function postDetails() {
+    console.log('POST');
+    const items = await axios.post('https://webhook.site/202838e1-803f-42d6-a494-fec5ab089a5b',
+        { kid: 'bambo' },
+        { headers: { "Accept": "application/json" } })
+        .then(res => {
+            console.log(res.data)
         })
     return items
 }
