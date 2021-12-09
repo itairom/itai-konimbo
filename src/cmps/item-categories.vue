@@ -15,9 +15,6 @@
 
 <script>
 export default {
-  created() {
-    console.log(this.categories, "categories");
-  },
   data() {
     return {
       filterBy: {

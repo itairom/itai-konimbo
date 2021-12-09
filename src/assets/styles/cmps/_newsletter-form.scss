@@ -21,6 +21,10 @@
         button {
             width: 100px;
             padding: 10px;
+            &:hover{
+                background-color: #19515f;
+                color: white;
+            }
         }
     }
 }

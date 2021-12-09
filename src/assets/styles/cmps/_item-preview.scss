@@ -11,12 +11,12 @@
         border: 1px solid black;
     }
     .title {
-        height: 60px;
+        height: 80px;
         width: 170px;
         direction: rtl;
         text-align: center;
         margin: 15px 0;
-        border-bottom: 1px solid #3333;
+        border-bottom: 1px solid $clr2;
     }
     img {
         width: 170px;
@@ -30,7 +30,7 @@
         .origin-price{
             margin-right:10px ;
             text-decoration: line-through;
-            color: #3333
+            color: $clr2
         }
     }
 

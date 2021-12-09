@@ -72,15 +72,14 @@
     display: block !important;
     position: fixed;
     background-color: white;
-    left: 20px;
-    top: 60px;
-    // animation: menu-in 0.2s ease-in;
+    left: 30px;
+    top: 100px;
+    animation: menu-in 0.2s ease-in;
     
     @include for-narrow-layout{
         display: block !important;
         left: 0;
         top: 0;
-        // display: flex !important;
         flex-direction: column;
         position: relative;
 

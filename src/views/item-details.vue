@@ -5,19 +5,13 @@
           <img alt="`item image`" :src="currImage" />
         </div>
         <div class="preview-images">
-          <!-- <img
-          v-for="img in item.images"
-          :src="img.url"
-          @click="setCurrImage(img.url)"
-          v-bind:key="getId"
-        /> -->
           <carousel :centerMode="true">
-            <slide v-for="img in item.images">
+            <slide v-for="(img, index) in item.images"  v-bind:key="getId+index+''">
               <img
                 :src="img.url"
                 :alt="item.title"
                 @click="setCurrImage(img.url)"
-                v-bind:key="getId"
+                v-bind:key="getId+index+''"
               />
             </slide>
           </carousel>
@@ -34,27 +28,27 @@
               </h1>
               <h1>{{ item.price }} ₪</h1>
             </div>
-            <div class="btn">קנה עכשיו</div>
-            <div class="btn">הוסף לסל</div>
+            <div  class="btn animate__headShake">קנה עכשיו</div>
+            <div class="btn ">הוסף לסל</div>
           </div>
           <div class="purchase-info">
             <div class="shipping">
               <img :src="require('@/assets/img/shipped.png')" alt="map" />
-              <p>משלוח מהיר בקנייה מעל ₪200</p>
+              <p>משלוח מהיר בקנייה מעל ₪200.</p>
             </div>
             <div class="map">
               <img :src="require('@/assets/img/map.png')" alt="map" />
-              <p>אפשרות איסוף מנקודות רבות ברחבי הארץ</p>
+              <p>אפשרות איסוף מנקודות רבות ברחבי הארץ.</p>
             </div>
             <div class="payment">
               <img :src="require('@/assets/img/credit-card.png')" alt="map" />
-              <p>אפשרות לעד 24 תשלומים ללא ריבית</p>
+              <p>אפשרות לעד 24 תשלומים ללא ריבית.</p>
             </div>
           </div>
-      <information-modal v-show="this.isNarrow" />
+      <newsletter-form v-show="this.isNarrow" />
 
         </div>
-          <information-modal class="mobile-information" v-show="!isNarrow"/>
+          <newsletter-form class="mobile-information" v-show="!isNarrow"/>
       </div>
 
   </section>
@@ -65,13 +59,13 @@
 import itemService from "@/services/item.service.js";
 import { Utils } from "./../services/utils.service";
 import { Carousel, Slide } from "vue-carousel";
-import InformationModal from "@/cmps/information-modal";
+import newsletterForm from "@/cmps/newsletter-form";
 
 export default {
   components: {
     Carousel,
     Slide,
-    InformationModal,
+    newsletterForm,
   },
   
   async created() {
@@ -87,9 +81,6 @@ export default {
       isNarrow: true,
     };
   },
-  updated(){
-    console.log("in");
-  },
   methods: {
     onLoad() {
       window.addEventListener("resize", this.widthListner);
@@ -97,16 +88,11 @@ export default {
 
     widthListner() {
       let pageWidth = window.innerWidth;
-      console.log(
-        "🚀 ~ file: item-details.vue ~ line 95 ~ widthListner ~ pageWidth",
-        pageWidth
-      );
       if (pageWidth > 700) {
         this.isNarrow = true;
       } else {
         this.isNarrow = false;
       }
-      console.log( this.isNarrow)
     },
     getId() {
       return Utils.getRandomId();

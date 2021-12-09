@@ -3,6 +3,7 @@ import app from './app.vue'
 import router from './router'
 // import store from './store'
 import '@/assets/styles/global.scss'
+import 'animate.css';
 
 Vue.config.productionTip = false
 

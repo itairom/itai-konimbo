@@ -59,6 +59,12 @@
                     background-color: black;
                     color: white;
                 }
+                @include for-narrow-layout{
+                    margin-right: 0;   
+                }
+                @include for-normal-layout{
+                    margin-right: 15px;   
+                }
             }
         }
     }

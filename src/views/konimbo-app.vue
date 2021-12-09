@@ -65,7 +65,7 @@ export default {
       } 
     },
     setCategories() {
-      const categories = this.items.map((item) => {
+      const categories = this.items?.map((item) => {
         return item.store_category_title;
       });
       const categoriesSet = [...new Set(categories)];

@@ -2,11 +2,11 @@
     display: none;
     border-radius: 10px;
     padding: 3px;
-    border: 1px solid #333;
+    border: 1px solid $clr2;
     h1 {
         padding: 5px 0;
         text-align: center;
-        border-bottom: #333 solid 1px;
+        border-bottom: $clr2 solid 1px;
     }
 
     @include for-narrow-layout {
@@ -30,7 +30,7 @@
         }
 
         li {
-            color: #333;
+            color: $clr2;
             text-align: start;
             direction: rtl;
             cursor: pointer;

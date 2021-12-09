@@ -1,20 +1,27 @@
 .app-header {
-    width: 96 dvw;
+    width: 100%;
     padding: 0 10px;
     background-color: #dfdfdf;
     @include for-narrow-layout {
-        width: 98vw;
         padding: 0 50px;
     }
-    p {
+    .phone {
+        font-size: 1.2rem;
+        letter-spacing: 0.1rem;
+        text-decoration: none;
         display: none;
         @include for-narrow-layout {
             display: block;
         }
-        &:last-of-type {
-            font-weight: bold;
-            color: rgb(197, 31, 31);
-            cursor: pointer;
+    }
+
+    .branch {
+        font-weight: bold;
+        color: rgb(197, 31, 31);
+        cursor: pointer;
+        display: none;
+        @include for-narrow-layout {
+            display: block;
         }
     }
 
