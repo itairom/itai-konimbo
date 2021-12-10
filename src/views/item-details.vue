@@ -49,10 +49,10 @@
           </div>
         </div>
       </div>
-      <newsletter-form  />
+      <newsletter-form />
       <a class="flex" href="./">
-            <img :src="require('@/assets/img/back.png')" alt="map" />
-      <span>חזרה</span>
+        <img :src="require('@/assets/img/back.png')" alt="map" />
+        <span>חזרה</span>
       </a>
     </div>
   </section>
