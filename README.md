@@ -1,4 +1,4 @@
-# cars-proj
+# konimbo-proj
 
 ## Project setup
 ```
