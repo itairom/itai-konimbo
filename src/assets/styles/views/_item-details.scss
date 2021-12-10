@@ -9,7 +9,7 @@
             display: flex;
         }
     }
-    
+
     @include for-narrow-layout {
         flex-direction: row;
         align-items: flex-start;
@@ -20,13 +20,12 @@
         justify-content: center;
         padding: 0 30px;
     }
-    
-    a{
-        img{
+
+    a {
+        img {
             width: 20px;
             height: 20px;
         }
-        // padding: 10px;
         text-decoration: none;
         position: absolute;
         right: 10px;
@@ -65,21 +64,22 @@
                 &.origin-price {
                     text-decoration: line-through;
                     font-weight: normal;
+                    color: $clr1;
                 }
                 font-weight: bold;
             }
             .btn {
                 width: 100px;
                 margin-right: 15px;
-                &:hover{
+                &:hover {
                     background-color: black;
                     color: white;
                 }
-                @include for-narrow-layout{
-                    margin-right: 0;   
+                @include for-narrow-layout {
+                    margin-right: 0;
                 }
-                @include for-normal-layout{
-                    margin-right: 15px;   
+                @include for-normal-layout {
+                    margin-right: 15px;
                 }
             }
         }
@@ -147,6 +147,4 @@
             padding-top: 5px;
         }
     }
-
-  
 }

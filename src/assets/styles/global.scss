@@ -1,20 +1,19 @@
 /*  BASE  */
-@import './setup/vars';
-@import './setup/mixins';
-@import './setup/helpers';
-@import './setup/layout';
-@import './setup/base';
+@import "./setup/vars";
+@import "./setup/mixins";
+@import "./setup/helpers";
+@import "./setup/layout";
+@import "./setup/base";
 
 // CMPS
 
-@import './cmps/item-categories';
-@import './cmps/item-list';
-@import './cmps/item-preview';
-@import './cmps/item-filter';
-@import './cmps/newsletter-form';
-@import './cmps/header';
+@import "./cmps/item-categories";
+@import "./cmps/item-list";
+@import "./cmps/item-preview";
+@import "./cmps/item-filter";
+@import "./cmps/newsletter-form";
+@import "./cmps/header";
 
 // VIEWS
-@import './views/item-app';
-@import './views/item-details';
-
+@import "./views/item-app";
+@import "./views/item-details";

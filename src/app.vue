@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import appHeader from '@/cmps/app-header';
+import appHeader from "@/cmps/app-header";
 
 export default {
   components: {

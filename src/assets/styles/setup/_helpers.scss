@@ -68,40 +68,6 @@
     cursor: pointer;
 }
 
-.toggle-menu {
-    display: block !important;
-    position: fixed;
-    background-color: white;
-    left: 30px;
-    top: 100px;
-    animation: menu-in 0.2s ease-in;
-    
-    @include for-narrow-layout{
-        display: block !important;
-        left: 0;
-        top: 0;
-        flex-direction: column;
-        position: relative;
-
-    }
-    @keyframes menu-in {
-        0% {
-            transform: translateX(-70%);
-        }
-        25% {
-            transform: translateX(-50%);
-        }
-        50% {
-            transform: translateX(-30%);
-        }
-        75% {
-            transform: translateX(-15%);
-        }
-        100% {
-            transform: translateX(0%);
-        }
-    }
-}
 
 .link{
     text-decoration: none;

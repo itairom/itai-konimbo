@@ -19,9 +19,8 @@
     }
     .item-grid {
         justify-content: center;
-        @include for-narrow-layout{
+        @include for-narrow-layout {
             justify-content: right;
-
         }
     }
 }

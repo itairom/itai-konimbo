@@ -7,21 +7,14 @@
 </template>
 
 <script>
-import ItemPreview from './item-preview.vue';
+import ItemPreview from "./item-preview.vue";
 export default {
   components: {
-    ItemPreview
+    ItemPreview,
   },
-
   props: {
     items: Array,
   },
-  methods: {
-
-  },
-  computed:{
-
-  }
 };
 </script>
 

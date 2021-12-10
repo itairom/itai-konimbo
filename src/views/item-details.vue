@@ -48,9 +48,8 @@
             <p>אפשרות לעד 24 תשלומים ללא ריבית.</p>
           </div>
         </div>
-        <newsletter-form v-show="this.isNarrow" />
       </div>
-      <newsletter-form class="mobile-information" v-show="!isNarrow" />
+      <newsletter-form  />
       <a class="flex" href="./">
             <img :src="require('@/assets/img/back.png')" alt="map" />
       <span>חזרה</span>
@@ -72,33 +71,18 @@ export default {
     Slide,
     newsletterForm,
   },
-
   async created() {
     const { id } = this.$route.params;
     this.item = await itemService.getItemById(id);
     this.currImage = this.item.images[0].url;
-    this.onLoad();
   },
   data() {
     return {
       item: null,
       currImage: null,
-      isNarrow: true,
     };
   },
   methods: {
-    onLoad() {
-      window.addEventListener("resize", this.widthListner);
-    },
-
-    widthListner() {
-      let pageWidth = window.innerWidth;
-      if (pageWidth > 700) {
-        this.isNarrow = true;
-      } else {
-        this.isNarrow = false;
-      }
-    },
     getId() {
       return Utils.getRandomId();
     },
@@ -106,7 +90,6 @@ export default {
       this.currImage = img;
     },
   },
-  computed: {},
 };
 </script>
 

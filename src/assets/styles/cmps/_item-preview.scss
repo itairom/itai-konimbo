@@ -27,10 +27,10 @@
 
     .price-container {
         display: flex;
-        .origin-price{
-            margin-right:10px ;
+        .origin-price {
+            margin-right: 10px;
             text-decoration: line-through;
-            color: $clr2
+            color: $clr1;
         }
     }
 
@@ -46,13 +46,4 @@
             width: 230px;
         }
     }
-    // @include for-narrow-layout{
-    //     .title{
-    //         width: 250px;
-    //     }
-    //     img{
-    //         width: 300px;
-    //         width: 300px;
-    //     }
-    // }
 }

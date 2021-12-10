@@ -30,7 +30,7 @@ export default {
   methods: {
     submitInformation(e) {
       e.preventDefault();
-      const isMailValid = this.validateEmail(this.userInformation.mail);
+      const isMailValid = this.validateMail(this.userInformation.mail);
       const isPhoneValid = this.validatePhone(this.userInformation.phone);
       const isNameValid = this.userInformation.name !== "" ? true : false;
       if (!isMailValid || !isPhoneValid || !isNameValid) return;
@@ -43,15 +43,13 @@ export default {
       alert("הרשמה התקבלה!");
     },
     validatePhone(phone) {
-
     if ((/^\d{3,11}$/).test(phone) ){
         return true;
       }
       alert("הכנס מספרים בלבד.");
       return false;
-
     },
-    validateEmail(mail) {
+    validateMail(mail) {
       if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
         return true;
       }

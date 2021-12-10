@@ -1,6 +1,5 @@
 <template>
   <section class="item-filter">
-
     <form>
       <input
         v-model="filterBy.title"
@@ -20,7 +19,6 @@
     </div>
   </section>
 </template>
-
 <script>
 export default {
   data() {
